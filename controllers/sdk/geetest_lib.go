@@ -68,6 +68,7 @@ func (g *GeetestLib) Register(digestmod string, params map[string]string) *Geete
 func (g *GeetestLib) requestRegister(params map[string]string) string {
 	params["gt"] = g.geetest_id
 	params["json_format"] = JSON_FORMAT
+	params["sdk"] = VERSION
 	register_url := API_URL + REGISTER_URL
 	g.gtlog(fmt.Sprintf("requestRegister(): 验证初始化, 向极验发送请求, url=%s, params=%s.", register_url, params))
 	resBody, err := g.httpGet(register_url, params)
