@@ -24,5 +24,5 @@ func (g *GeetestLibResult) setAll(status int, data string, msg string) {
 }
 
 func (g *GeetestLibResult) String() string {
-	return fmt.Sprintf("GeetestLibResult{Status=%s, Data=%s, Msg=%s}", g.Status, g.Data, g.Msg)
+	return fmt.Sprintf("GeetestLibResult{Status=%d, Data=%s, Msg=%s}", g.Status, g.Data, g.Msg)
 }
